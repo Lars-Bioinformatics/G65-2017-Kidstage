@@ -1,0 +1,7 @@
+name: ngcgh
+channels:
+    - conda-forge
+dependencies:
+    - python=2.7
+    - pip:
+        - ngcgh

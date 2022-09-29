@@ -1,0 +1,9 @@
+jobs: 999
+cluster: "sbatch --mem={resources.mem_mb} -c {resources.cpus}"
+default-resources: [cpus=1, mem_mb=6000]
+# default-resources: [cpus=7, mem=40000]
+keep-going: True
+# output: "slurm_logs/{rule}/{rule}.{wildcards}.out"
+# error: "slurm_logs/{rule}/{rule}.{wildcards}.err"
+
+#  -o logs_slurm/success/{rule}_{wildcards} -e logs_slurm/error/{rule}_{wildcards}

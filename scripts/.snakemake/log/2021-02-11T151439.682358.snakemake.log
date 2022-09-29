@@ -1,0 +1,4 @@
+Building DAG of jobs...
+MissingInputException in line 285 of /work/G65-2017-Kidstage/scripts/mutect2-gatk4-wes-somatic-hg38.smk:
+Missing input files for rule GetPileupSummaries:
+bam/G65-B3-C7C3_nimblegen-medexome_HYLKFDSXX.connor.recalibrated.bam
