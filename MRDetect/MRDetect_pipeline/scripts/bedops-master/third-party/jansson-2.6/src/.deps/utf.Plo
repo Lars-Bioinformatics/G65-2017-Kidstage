@@ -1,0 +1,66 @@
+utf.lo: utf.c \
+ /home/jakob/anaconda3/x86_64-conda_cos6-linux-gnu/sysroot/usr/include/string.h \
+ /home/jakob/anaconda3/x86_64-conda_cos6-linux-gnu/sysroot/usr/include/features.h \
+ /home/jakob/anaconda3/x86_64-conda_cos6-linux-gnu/sysroot/usr/include/sys/cdefs.h \
+ /home/jakob/anaconda3/x86_64-conda_cos6-linux-gnu/sysroot/usr/include/bits/wordsize.h \
+ /home/jakob/anaconda3/x86_64-conda_cos6-linux-gnu/sysroot/usr/include/gnu/stubs.h \
+ /home/jakob/anaconda3/x86_64-conda_cos6-linux-gnu/sysroot/usr/include/gnu/stubs-64.h \
+ /home/jakob/anaconda3/lib/gcc/x86_64-conda_cos6-linux-gnu/7.3.0/include/stddef.h \
+ /home/jakob/anaconda3/x86_64-conda_cos6-linux-gnu/sysroot/usr/include/xlocale.h \
+ /home/jakob/anaconda3/x86_64-conda_cos6-linux-gnu/sysroot/usr/include/bits/string.h \
+ /home/jakob/anaconda3/x86_64-conda_cos6-linux-gnu/sysroot/usr/include/bits/string2.h \
+ /home/jakob/anaconda3/x86_64-conda_cos6-linux-gnu/sysroot/usr/include/endian.h \
+ /home/jakob/anaconda3/x86_64-conda_cos6-linux-gnu/sysroot/usr/include/bits/endian.h \
+ /home/jakob/anaconda3/x86_64-conda_cos6-linux-gnu/sysroot/usr/include/bits/byteswap.h \
+ /home/jakob/anaconda3/x86_64-conda_cos6-linux-gnu/sysroot/usr/include/bits/types.h \
+ /home/jakob/anaconda3/x86_64-conda_cos6-linux-gnu/sysroot/usr/include/bits/typesizes.h \
+ /home/jakob/anaconda3/x86_64-conda_cos6-linux-gnu/sysroot/usr/include/stdlib.h \
+ /home/jakob/anaconda3/x86_64-conda_cos6-linux-gnu/sysroot/usr/include/bits/string3.h \
+ utf.h ../config.h \
+ /home/jakob/anaconda3/lib/gcc/x86_64-conda_cos6-linux-gnu/7.3.0/include/stdint.h \
+ /home/jakob/anaconda3/x86_64-conda_cos6-linux-gnu/sysroot/usr/include/stdint.h \
+ /home/jakob/anaconda3/x86_64-conda_cos6-linux-gnu/sysroot/usr/include/bits/wchar.h
+
+/home/jakob/anaconda3/x86_64-conda_cos6-linux-gnu/sysroot/usr/include/string.h:
+
+/home/jakob/anaconda3/x86_64-conda_cos6-linux-gnu/sysroot/usr/include/features.h:
+
+/home/jakob/anaconda3/x86_64-conda_cos6-linux-gnu/sysroot/usr/include/sys/cdefs.h:
+
+/home/jakob/anaconda3/x86_64-conda_cos6-linux-gnu/sysroot/usr/include/bits/wordsize.h:
+
+/home/jakob/anaconda3/x86_64-conda_cos6-linux-gnu/sysroot/usr/include/gnu/stubs.h:
+
+/home/jakob/anaconda3/x86_64-conda_cos6-linux-gnu/sysroot/usr/include/gnu/stubs-64.h:
+
+/home/jakob/anaconda3/lib/gcc/x86_64-conda_cos6-linux-gnu/7.3.0/include/stddef.h:
+
+/home/jakob/anaconda3/x86_64-conda_cos6-linux-gnu/sysroot/usr/include/xlocale.h:
+
+/home/jakob/anaconda3/x86_64-conda_cos6-linux-gnu/sysroot/usr/include/bits/string.h:
+
+/home/jakob/anaconda3/x86_64-conda_cos6-linux-gnu/sysroot/usr/include/bits/string2.h:
+
+/home/jakob/anaconda3/x86_64-conda_cos6-linux-gnu/sysroot/usr/include/endian.h:
+
+/home/jakob/anaconda3/x86_64-conda_cos6-linux-gnu/sysroot/usr/include/bits/endian.h:
+
+/home/jakob/anaconda3/x86_64-conda_cos6-linux-gnu/sysroot/usr/include/bits/byteswap.h:
+
+/home/jakob/anaconda3/x86_64-conda_cos6-linux-gnu/sysroot/usr/include/bits/types.h:
+
+/home/jakob/anaconda3/x86_64-conda_cos6-linux-gnu/sysroot/usr/include/bits/typesizes.h:
+
+/home/jakob/anaconda3/x86_64-conda_cos6-linux-gnu/sysroot/usr/include/stdlib.h:
+
+/home/jakob/anaconda3/x86_64-conda_cos6-linux-gnu/sysroot/usr/include/bits/string3.h:
+
+utf.h:
+
+../config.h:
+
+/home/jakob/anaconda3/lib/gcc/x86_64-conda_cos6-linux-gnu/7.3.0/include/stdint.h:
+
+/home/jakob/anaconda3/x86_64-conda_cos6-linux-gnu/sysroot/usr/include/stdint.h:
+
+/home/jakob/anaconda3/x86_64-conda_cos6-linux-gnu/sysroot/usr/include/bits/wchar.h:

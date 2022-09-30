@@ -1,0 +1,9 @@
+{
+    "path" : "~/tapas_pipeline/R",
+    "sortOrder" : [
+        {
+            "ascending" : true,
+            "columnIndex" : 2
+        }
+    ]
+}

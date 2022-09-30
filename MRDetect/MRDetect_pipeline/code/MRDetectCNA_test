@@ -1,0 +1,49 @@
+
+checkpoint MRDetectCNA_BED2Intervals:
+    input:
+        bed=output_dir+"raw/varscan2cna/{tumor}_vs_{normal}/{tumor}_vs_{normal}.cnv.bed"
+    output:
+        output_dir+"raw/varscan2cna/mrdetectcna/min90max150/{tumor}_vs_{normal}/{plasma}/MRDetectCNA_BED2Intervals_complete"
+        #expand(output_dir+"raw/varscan2cna/mrdetectcna/min90max150/{{tumor}}_vs_{{normal}}/{{plasma}}/tmp/intervals/{interval_n}.{interval_type}.cnv.interval_list",
+        #interval_n=i[0]+"_"+i[1]+"_"+i[2],
+        #interval_type=i[3]) for i in pd.read_table(output_dir+"raw/varscan2cna/{tumor}_vs_{normal}/{tumor}_vs_{normal}.bed")
+    shell:
+        """
+        set +eu \
+        && PS1=dummy \
+        && . $(conda info --base)/etc/profile.d/conda.sh \
+        && conda activate mrdetect \
+        && echo $CONDA_PREFIX;
+
+        sample_dir={params.output_dir}/{wildcards.plasma}
+        if [ ! -d $sample_dir ]; then
+            mkdir -p $sample_dir
+        fi
+
+        interval_dir={params.output_dir}{wildcards.plasma}/{params.intervalname}/intervals
+        segments_out_dir={params.output_dir}{wildcards.plasma}/{params.intervalname}/segments
+
+        if [ ! -d $interval_dir ]; then
+            mkdir -p $interval_dir
+        fi
+
+        if [ ! -d $segments_out_dir ]; then
+            mkdir -p $segments_out_dir
+        fi
+
+        # Convert CNV bed file to intervals
+        REF={ref}
+        REF=${{REF%.fasta}}.dict
+        grep -v "^#" {input.bed} | awk '{{print $1,$2,$3,$4}}' | while read v1 v2 v3 v4; do cat $REF > $interval_dir/"$v1"_"$v2"_"$v3"."$v4".cnv.interval_list; printf "$v1\t$v2\t$v3\t+\twindow\n" >> $interval_dir/"$v1"_"$v2"_"$v3"."$v4".cnv.interval_list; done
+
+        echo "success" > {output}
+        """
+
+rule aggregate:
+    input:
+        
+        expand(output_dir+"raw/varscan2cna/mrdetectcna/min90max150/{tumor}_vs_{normal}/{plasma}/tmp/intervals/{interval_n}.{interval_type}.cnv.interval_list",
+        interval_n=i[0]+"_"+i[1]+"_"+i[2],
+        interval_type=i[3]) for i in pd.read_table(output_dir+"raw/varscan2cna/{tumor}_vs_{normal}/{tumor}_vs_{normal}.bed")
+    output:
+        output_dir+"raw/varscan2cna/mrdetectcna/min90max150/{tumor}_vs_{normal}/intervals"

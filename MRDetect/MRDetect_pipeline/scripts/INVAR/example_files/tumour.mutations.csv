@@ -1,0 +1,6 @@
+CHROM	POSM1	POS	REF	ALT	Patient	lesion	x1kgenomes	pt_uniq_pos	pt_uniq_alt	uniq_alt	lesion_uniq	tumour_AF	uniq_pos
+chr17	72341041	72341042	G	C	patient1	patient1_A1	0	patient1_chr17:72341042	patient1_chr17:72341042_G/C	chr17:72341042_G/C	patient1_A1_chr17:72341042_G/C	0.069608696	chr17:72341042
+chr2	166747053	166747054	G	C	patient1	patient1_A1	0	patient1_chr2:166747054	patient1_chr2:166747054_G/C	chr2:166747054_G/C	patient1_A1_chr2:166747054_G/C	0.190666667	chr2:166747054
+chr3	100949948	100949949	A	G	patient1	patient1_A2	0	patient1_chr3:100949949	patient1_chr3:100949949_A/G	chr3:100949949_A/G	patient1_A2_chr3:100949949_A/G	0.204299517	chr3:100949949
+chr2	141665427	141665428	C	A	patient1	patient1_A2	0	patient1_chr2:141665428	patient1_chr2:141665428_C/A	chr2:141665428_C/A	patient1_A2_chr2:141665428_C/A	0.05	chr2:141665428
+chr7	140287448	140287449	T	C	patient1	patient1_A2	0	patient1_chr7:140287449	patient1_chr7:140287449_T/C	chr7:140287449_T/C	patient1_A2_chr7:140287449_T/C	0.321081871	chr7:140287449

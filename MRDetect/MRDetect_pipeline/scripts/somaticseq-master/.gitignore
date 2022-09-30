@@ -1,0 +1,13 @@
+*.pyc
+.DS_Store
+__pycache__
+test.*
+Manual.aux
+Manual.bbl
+Manual.blg
+Manual.log
+Manual.out
+Manual.synctex.gz
+SomaticSeq.egg-info
+dist
+build

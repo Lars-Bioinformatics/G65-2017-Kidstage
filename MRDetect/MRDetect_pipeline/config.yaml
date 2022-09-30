@@ -1,0 +1,91 @@
+# Create sample tsv files on workflow start
+tsvOnStart: False
+#tsvOnStart: True
+
+# Input directory containing tumor resection/biopsy alignment files (*.bam, *.bai)
+# inputdir: /work/PC-Connor-bam-hg38/
+inputdir: /work/G65-2017-Kidstage/Connor/bam/
+
+# Input directory containing plasma sample alignment files (*.bam, *.bai)
+# plasmadir: /work/files/plasma/max150/
+plasmadir: /work/G65-2017-Kidstage/Connor/bam/
+
+# Output directory (Analysis)
+outputdir: /work/G65-2017-Kidstage/Connor/MRDetect_result/
+
+# Identifiers to subset and truncate sample names
+samplesubset:
+  bamsuffix: .connor.recalibrated.bam
+  refsample: G65-B
+  tumor: G65-T
+  plasma: G65-P
+  # biopsy: -op
+
+# DNA-Seq data type [exome, genome]
+ngsdatatype: exome
+
+# Resources 
+ref: /work/sduvarcall/resources/hg38/Homo_sapiens_assembly38.fasta
+gnomad: /work/sduvarcall/resources/hg38/af-only-gnomad.hg38.vcf.gz
+medexome: /work/sduvarcall/resources/hg38/MedExome_hg38_capture_targets.bed
+dbsnp: /work/sduvarcall/resources/hg38/Homo_sapiens_assembly38.dbsnp138.vcf.gz
+common_variants: /work/sduvarcall/resources/hg38/small_exac_common_3.hg38.vcf.gz
+centromeres: /work/files/resources/GRCh37.p13_centromere_UCSC-gapTable.bed
+pon_1000g: "/work/sduvarcall/resources/hg38/1000g_pon.hg38.vcf.gz"
+target_regions: "/work/sduvarcall/resources/hg38/MedExome_target_regions/target_regions/"
+
+# Threads
+threadsparallel: 63
+
+# GATK memory
+mem: -Xmx24g
+
+# Variant Callers 
+#   When adding additional variant callers, the script prefix must 
+#   be identical to the YAML key.
+#     Workflow:
+#       rules/[variantcaller].smk
+#     YAML key and values:
+#       [variantcaller]:
+#         include: [True, False]
+#         variants: [snvs, indels, both, bothcombined]
+variantcaller:
+  lofreq: 
+    include: True
+    variants: both
+  muse: 
+    include: False
+    variants: snvs
+  mutect: 
+    include: True
+    variants: bothcombined
+  scalpel: 
+    include: False
+    variants: indels
+  somaticsniper: 
+    include: False
+    variants: snvs
+  strelka: 
+    include: True
+    variants: both
+  vardict: 
+    include: False
+    variants: bothcombined
+  varscan: 
+    include: False
+    variants: both
+
+# Copy Number Analysis 
+#   Similar 'key: value' relationship as for variant callers
+copynumberanalysis:
+  titancna: 
+    run: False
+  varscan:
+    run: True
+
+# Matched samples (generated with 'code/samples.R')
+tumor-plasma-normal: config/matched-tumor-plasma-normal.tsv
+tumor-normal: config/matched-tumor-normal.tsv
+plasma-normal: config/matched-plasma-normal.tsv
+biopsy-normal: config/matched-biopsy-normal.tsv
+ensemble: config/ensemble-biopsy-normal.tsv

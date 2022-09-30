@@ -1,0 +1,2 @@
+input/SLX-10000_D704_D508.mrkdup.connor.f0.9_s2.bam
+input/SLX-10000_D705_D502.mrkdup.connor.f0.9_s2.bam
